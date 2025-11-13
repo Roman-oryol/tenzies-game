@@ -1,16 +1,35 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tenzies
 
-Currently, two official plugins are available:
+Небольшой учебный проект — реализация игры "Tenzies" на React + Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Кратко:
 
-## React Compiler
+- Игра с десятью кубиками. Нажимайте на кубики, чтобы закрепить их, и жмите "Roll" — цель: сделать все кубики с одинаковым значением.
+- Простая логика состояния в `src/App.jsx`; компоненты `Die.jsx` и `Result.jsx`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Требования:
 
-## Expanding the ESLint configuration
+- Node.js (рекомендуется v16+)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Как запустить локально:
+
+1. Установить зависимости:
+   `npm install`
+2. Запустить dev-сервер:
+   `npm run dev`
+3. Собрать для продакшна:
+   `npm run build`
+4. Просмотреть билд:
+   `npm run preview`
+
+Структура (основное):
+
+- `src/` — исходники React-приложения
+  - `App.jsx` — логика игры
+  - `Die.jsx` — компонент кубика
+  - `Result.jsx` — отображение результатов
+- `index.html`, `vite.config.js` — конфигурация Vite
+
+Примечание: проект учебный — цель показать работу с состоянием компонентов, событиями и простую доступность (aria-атрибуты).
